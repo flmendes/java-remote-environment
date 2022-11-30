@@ -10,3 +10,4 @@ vscode:
   - Pivotal.vscode-boot-dev-pack
   - vscjava.vscode-lombok
   - redhat.vscode-quarkus
+  - vscjava.vscode-lombok
