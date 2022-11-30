@@ -22,7 +22,9 @@
 		"vscjava.vscode-java-pack",
 		"redhat.vscode-xml",
 		"Pivotal.vscode-boot-dev-pack",
-		"mhutchie.git-graph"
+		"mhutchie.git-graph",
+		"vscjava.vscode-lombok",
+		"redhat.vscode-quarkus"
 	],
 	"forwardPorts": [8080],
 	"settings": {
