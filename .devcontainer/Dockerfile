@@ -9,5 +9,7 @@ VOLUME /home/$USER/.m2
 VOLUME /home/$USER/.gradle
 
 ARG JAVA_VERSION=17.0.4.1-ms
+ARG MAVEN_VERSION="3.8.5"
 RUN sudo mkdir /home/$USER/.m2 /home/$USER/.gradle && sudo chown $USER:$USER /home/$USER/.m2 /home/$USER/.gradle
+RUN su vscode -c 'umask 0002 && . /usr/local/sdkman/bin/sdkman-init.sh && sdk install maven $MAVEN_VERSION'
 RUN bash -lc '. /usr/local/sdkman/bin/sdkman-init.sh && sdk install java $JAVA_VERSION && sdk use java $JAVA_VERSION'
