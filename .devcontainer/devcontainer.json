@@ -1,15 +1,18 @@
 {
 	"name": "Java Remote Environment",
-	"dockerFile": "Dockerfile",
-	"args": {
-		// Update the VARIANT arg to pick a Java version: 8, 11, 17
-		// Append -bullseye or -buster to pin to an OS version.
-		// Use the -bullseye variants on local arm64/Apple Silicon.
-		"VARIANT": "17-bullseye",
-		// Options
-		"INSTALL_MAVEN": "true",
-		"MAVEN_VERSION": "3.8.5",
-		"INSTALL_GRADLE": "false"
+	"build": {
+		"dockerfile": "Dockerfile",
+		"args": {
+			// Update the VARIANT arg to pick a Java version: 8, 11, 17
+			// Append -bullseye or -buster to pin to an OS version.
+			// Use the -bullseye variants on local arm64/Apple Silicon.
+			"VARIANT": "17-bullseye",
+			// Options
+			"INSTALL_MAVEN": "true",
+			"MAVEN_VERSION": "3.8.5",
+			"INSTALL_GRADLE": "false",
+			"NODE_VERSION": "lts/*"
+		}
 	},
 	"initializeCommand": "mkdir -p ${env:HOME}/.m2 ${env:HOME}/.gradle",
 	"postCreateCommand": "sudo chown vscode:vscode /home/vscode/.m2 /home/vscode/.gradle",
