@@ -14,8 +14,6 @@
 			"NODE_VERSION": "lts/*"
 		}
 	},
-	"initializeCommand": "mkdir -p ${env:HOME}/.m2 ${env:HOME}/.gradle",
-	"postCreateCommand": "sudo chown vscode:vscode /home/vscode/.m2 /home/vscode/.gradle",
 	"remoteUser": "vscode",
 	"features": {
 		"docker-in-docker": "latest",
