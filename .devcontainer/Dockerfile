@@ -1,5 +1,5 @@
 ARG VARIANT=17-bullseye
-FROM mcr.microsoft.com/vscode/devcontainers/java:0-${VARIANT}
+FROM mcr.microsoft.com/vscode/devcontainers/java:${VARIANT}
 
 ARG JAVA_VERSION=17.0.7-tem
 RUN bash -lc '. /usr/local/sdkman/bin/sdkman-init.sh && sdk install java $JAVA_VERSION && sdk use java $JAVA_VERSION'
