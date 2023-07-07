@@ -9,7 +9,7 @@
 			"VARIANT": "17-bullseye",
 			// Options
 			"INSTALL_MAVEN": "true",
-			"MAVEN_VERSION": "3.8.5",
+			"MAVEN_VERSION": "3.9.3",
 			"INSTALL_GRADLE": "false",
 			"NODE_VERSION": "lts/*"
 		}
